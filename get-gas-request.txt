@@ -1,0 +1,6 @@
+curl \
+-X POST \
+--silent \
+-H "Content-Type:application/json" \
+--data '{"jsonrpc":"2.0", "method":"eth_getBlockByNumber", "params":["latest", false], "id":1}' \
+"https://public-node.testnet.rsk.co/"
