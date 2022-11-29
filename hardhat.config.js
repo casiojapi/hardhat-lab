@@ -25,6 +25,8 @@ if (typeof minimumGasPrice !== 'number' || isNaN(minimumGasPrice)) {
 }
 console.log("minimum gas price on rsk testnet: ", minimumGasPrice);
 
+const gasMultiplier = 1.1;
+
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.13",
@@ -33,5 +35,19 @@ module.exports = {
     rskregtest: {
       url: 'http://localhost:4444'
     },
+    rsktestnet: {
+      chainId: 31,
+      url: "https://public-node.testnet.rsk.co/",
+      gasPrice: minimumGasPrice,
+      gasPriceMultiplier: gasMultiplier,
+      accounts: {
+        mnemonic: rskTestnetSeedPhrase,
+        path: "m/44'/37310'/0'/0",
+        initialIndex: 0,
+        count: 10,
+        
+      }
+
+    }
   },
 };
