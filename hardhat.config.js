@@ -42,10 +42,10 @@ module.exports = {
       gasPriceMultiplier: gasMultiplier,
       accounts: {
         mnemonic: rskTestnetSeedPhrase,
-        path: "m/44'/37310'/0'/0",
+        path: "m/44'/60'/0'/0",
         initialIndex: 0,
         count: 10,
-        
+
       }
 
     }
